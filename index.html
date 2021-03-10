@@ -28,14 +28,19 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 
+
+	
+
+
 </head>
 
 
-<body id="top">
+<body onload='myInit()' id="top">
+<canvas id='myCanvas'></canvas> 
     
     <!-- preloader
     ================================================== -->
-    <div id="preloader">
+       <div id="preloader">
         <div id="loader" class="dots-jump">
             <div></div>
             <div></div>
@@ -155,17 +160,36 @@
     <!-- about
     ================================================== -->
     <section id="about" class="s-about target-section">
+	
+	
+	
 
-        <img src="images/plan3.png" usemap="#image-map" data-aos="fade-up">
+        <!-- <img src="images/plan3.png" usemap="#fort" data-aos="fade-up">
 
-					<map name="image-map">
-						<area target="" alt="" title="" href="" coords="271,12,621,8,640,12,662,17,678,21,687,24,688,87,644,140,275,136" shape="poly">
-						<area target="" alt="" title="" href="" coords="671,148,721,41,745,56,762,70,780,89,786,104,802,122,814,146,820,170,828,192,830,227,828,254,823,280,805,311,800,324,789,337,778,351,771,358,724,338,712,313,712,280,725,220,720,193,700,164" shape="poly">
-						<area target="" alt="" title="" href="" coords="689,303,747,381,675,415,626,423,441,425,391,422,390,450,346,452,321,384,347,322,565,325,629,323,668,316" shape="poly">
-						<area target="" alt="" title="" href="" coords="310,324,213,320,199,316,136,343,117,412,131,425,151,435,176,442,193,447,218,449,239,449,267,450,283,451,294,451,308,451" shape="poly">
-						<area target="" alt="" title="" href="" coords="169,294,87,390,70,375,62,359,53,346,47,337,41,327,36,320,29,307,24,299,24,284,23,273,19,254,14,241,14,231,19,221,20,206,24,197,31,183,33,167,47,126,63,103,67,88,84,74,99,61,110,53,122,46,134,38,139,34,154,30,164,47,172,66,186,92,193,114,198,135,150,179,145,198,142,210,137,230,142,238,149,261,154,275" shape="poly">
-						<area target="" alt="" title="" href="" coords="221,150,636,150,647,151,664,156,677,163,684,167,695,181,698,189,705,208,710,219,711,230,712,240,711,253,702,269,696,279,690,292,682,297,670,301,660,305,647,309,636,313,226,311,211,308,190,298,182,293,167,279,160,268,154,253,152,231,160,196,164,187,178,173,190,164,193,158,205,153" shape="poly">
+					<map name="fort">
+						<area key="1" target="" alt="" title="" href="/" coords="271,12,621,8,640,12,662,17,678,21,687,24,688,87,644,140,275,136" shape="poly">
+						<area key="2" target="" alt="" title="" href="/" coords="671,148,721,41,745,56,762,70,780,89,786,104,802,122,814,146,820,170,828,192,830,227,828,254,823,280,805,311,800,324,789,337,778,351,771,358,724,338,712,313,712,280,725,220,720,193,700,164" shape="poly">
+						<area key="3" target="" alt="" title="" href="/" coords="689,303,747,381,675,415,626,423,441,425,391,422,390,450,346,452,321,384,347,322,565,325,629,323,668,316" shape="poly">
+						<area key="4" target="" alt="" title="" href="/" coords="310,324,213,320,199,316,136,343,117,412,131,425,151,435,176,442,193,447,218,449,239,449,267,450,283,451,294,451,308,451" shape="poly">
+						<area key="5" target="" alt="" title="" href="/" coords="169,294,87,390,70,375,62,359,53,346,47,337,41,327,36,320,29,307,24,299,24,284,23,273,19,254,14,241,14,231,19,221,20,206,24,197,31,183,33,167,47,126,63,103,67,88,84,74,99,61,110,53,122,46,134,38,139,34,154,30,164,47,172,66,186,92,193,114,198,135,150,179,145,198,142,210,137,230,142,238,149,261,154,275" shape="poly">
+						<area key="6" target="" alt="" title="" href="/" coords="221,150,636,150,647,151,664,156,677,163,684,167,695,181,698,189,705,208,710,219,711,230,712,240,711,253,702,269,696,279,690,292,682,297,670,301,660,305,647,309,636,313,226,311,211,308,190,298,182,293,167,279,160,268,154,253,152,231,160,196,164,187,178,173,190,164,193,158,205,153" shape="poly">
 					</map> 
+					-->
+					
+<center>
+<img src='images/plan3.png' usemap='#imgmap_css_container_imgmap201293016112' class='imgmap_css_container' title='imgmap201293016112' alt='imgmap201293016112' id='img-imgmap201293016112' />
+<map id='imgmap201293016112' name='imgmap_css_container_imgmap201293016112'>
+
+	<area onmouseover='myHover(this);' onmouseout='myLeave();' target="" alt="" title="" href="/" coords="271,12,621,8,640,12,662,17,678,21,687,24,688,87,644,140,275,136" shape="poly" alt="imgmap201293016112-1" title="imgmap201293016112-1" class="imgmap201293016112-area" id="imgmap201293016112-area-0">
+	<area onmouseover='myHover(this);' onmouseout='myLeave();' target="" alt="" title="" href="/" coords="671,148,721,41,745,56,762,70,780,89,786,104,802,122,814,146,820,170,828,192,830,227,828,254,823,280,805,311,800,324,789,337,778,351,771,358,724,338,712,313,712,280,725,220,720,193,700,164" shape="poly" alt="imgmap201293016112-1" title="imgmap201293016112-1" class="imgmap201293016112-area" id="imgmap201293016112-area-1">
+	<area onmouseover='myHover(this);' onmouseout='myLeave();' target="" alt="" title="" href="/" coords="689,303,747,381,675,415,626,423,441,425,391,422,390,450,346,452,321,384,347,322,565,325,629,323,668,316" shape="poly" alt="imgmap201293016112-1" title="imgmap201293016112-1" class="imgmap201293016112-area" id="imgmap201293016112-area-2">
+	<area onmouseover='myHover(this);' onmouseout='myLeave();' target="" alt="" title="" href="/" coords="310,324,213,320,199,316,136,343,117,412,131,425,151,435,176,442,193,447,218,449,239,449,267,450,283,451,294,451,308,451" shape="poly" alt="imgmap201293016112-1" title="imgmap201293016112-1" class="imgmap201293016112-area" id="imgmap201293016112-area-3">
+	<area onmouseover='myHover(this);' onmouseout='myLeave();' target="" alt="" title="" href="/" coords="169,294,87,390,70,375,62,359,53,346,47,337,41,327,36,320,29,307,24,299,24,284,23,273,19,254,14,241,14,231,19,221,20,206,24,197,31,183,33,167,47,126,63,103,67,88,84,74,99,61,110,53,122,46,134,38,139,34,154,30,164,47,172,66,186,92,193,114,198,135,150,179,145,198,142,210,137,230,142,238,149,261,154,275" shape="poly" alt="imgmap201293016112-1" title="imgmap201293016112-1" class="imgmap201293016112-area" id="imgmap201293016112-area-4">
+	<area onmouseover='myHover(this);' onmouseout='myLeave();' target="" alt="" title="" href="/" coords="221,150,636,150,647,151,664,156,677,163,684,167,695,181,698,189,705,208,710,219,711,230,712,240,711,253,702,269,696,279,690,292,682,297,670,301,660,305,647,309,636,313,226,311,211,308,190,298,182,293,167,279,160,268,154,253,152,231,160,196,164,187,178,173,190,164,193,158,205,153" shape="poly" alt="imgmap201293016112-1" title="imgmap201293016112-1" class="imgmap201293016112-area" id="imgmap201293016112-area-5">
+
+</map>
+</center>
+
 
     </section> <!-- end s-about -->
 
@@ -642,8 +666,119 @@
 
     <!-- Java Script
     ================================================== -->
-    <script src="js/jquery-3.2.1.min.js"></script>
+   <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+<script>
+
+// stores the device context of the canvas we use to draw the outlines
+// initialized in myInit, used in myHover and myLeave
+var hdc;
+
+// shorthand func
+function byId(e){return document.getElementById(e);}
+
+// takes a string that contains coords eg - "227,307,261,309, 339,354, 328,371, 240,331"
+// draws a line from each co-ord pair to the next - assumes starting point needs to be repeated as ending point.
+function drawPoly(coOrdStr)
+{
+    var mCoords = coOrdStr.split(',');
+    var i, n;
+    n = mCoords.length;
+
+    hdc.beginPath();
+    hdc.moveTo(mCoords[0], mCoords[1]);
+    for (i=2; i<n; i+=2)
+    {
+        hdc.lineTo(mCoords[i], mCoords[i+1]);
+    }
+    hdc.lineTo(mCoords[0], mCoords[1]);
+    hdc.stroke();
+}
+
+function drawRect(coOrdStr)
+{
+    var mCoords = coOrdStr.split(',');
+    var top, left, bot, right;
+    left = mCoords[0];
+    top = mCoords[1];
+    right = mCoords[2];
+    bot = mCoords[3];
+    hdc.strokeRect(left,top,right-left,bot-top); 
+}
+
+function myHover(element)
+{
+    var hoveredElement = element;
+    var coordStr = element.getAttribute('coords');
+    var areaType = element.getAttribute('shape');
+
+    switch (areaType)
+    {
+        case 'polygon':
+        case 'poly':
+            drawPoly(coordStr);
+            break;
+
+        case 'rect':
+            drawRect(coordStr);
+    }
+}
+
+function myLeave()
+{
+    var canvas = byId('myCanvas');
+    hdc.clearRect(0, 0, canvas.width, canvas.height);
+}
+
+function myInit()
+{
+    // get the target image
+    var img = byId('img-imgmap201293016112');
+
+    var x,y, w,h;
+
+    // get it's position and width+height
+    x = img.offsetLeft;
+    y = img.offsetTop;
+    w = img.clientWidth;
+    h = img.clientHeight;
+
+    // move the canvas, so it's contained by the same parent as the image
+    var imgParent = img.parentNode;
+    var can = byId('myCanvas');
+    imgParent.appendChild(can);
+
+    // place the canvas in front of the image
+    can.style.zIndex = 1;
+
+    // position it over the image
+    can.style.left = x+'px';
+    can.style.top = y+'px';
+
+    // make same size as the image
+    can.setAttribute('width', w+'px');
+    can.setAttribute('height', h+'px');
+
+    // get it's context
+    hdc = can.getContext('2d');
+
+    // set the 'default' values for the colour/width of fill/stroke operations
+    hdc.fillStyle = 'yellow';
+    hdc.strokeStyle = 'yellow';
+    hdc.lineWidth = 5;
+}
+</script>
+    <script src="js/imageMapResizer.js"></script>
+
+	
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
 	<script src="js/modernizr.js"></script>
+	
+	<script language="Javascript">
+	$(document).ready(function() {
+    $('map').imageMapResize();
+});
+
+</script>
+	
 </body>
